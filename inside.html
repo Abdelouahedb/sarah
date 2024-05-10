@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('proxima-nova.woff2') format('woff2'),
+                url('proxima-nova.woff') format('woff');
+        }
+
+        .centered-title {
+            text-align: center;
+        }
+
+        body {
+            background: linear-gradient(to right, #c04848, #480048);
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #ffffff;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            font-family: 'Open Sans', sans-serif;
+            /* Changed font for username and password inputs */
+        }
+
+        button {
+            background-color: #c04848;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        button:hover {
+            background-color: #b03636;
+        }
+
+        .bottom-text {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .bottom-text a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .bottom-text a:hover {
+            text-decoration: underline;
+        }
+
+        #message {
+            opacity: 1;
+            transition: opacity 1s ease;
+            /* Add a transition for opacity */
+        }
+
+        /* Hide the message when opacity is 0 */
+        #message.hidden {
+            opacity: 0;
+        }
+
+        .mirror-ball {
+            position: fixed;
+            width: 150px;
+            /* Adjust size as needed */
+            top: 0px;
+            /* Distance from top */
+        }
+
+        .mirror-ball-left {
+            left: 20px;
+            /* Distance from left */
+        }
+
+        .mirror-ball-right {
+            right: 20px;
+            /* Distance from right */
+        }
+        .image-container {
+            display: inline-block;
+            border: 3px solid rgba(0, 0, 0, 0.2); /* Border with low opacity */
+            padding: 10px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            opacity: 0.5; /* Low opacity for the image */
+        }
+    </style>
+
+<body>
+
+    <div id="message">
+        <h1>YOUUUU DID ITTTT BABEE <img src="redheart.png" alt="red heart" height="50"><img src="sparkles.png"
+                alt="red heart" height="50"></h1>
+    </div>
+
+
+
+
+    <div id="content" style="display: none;">
+
+        <audio id="myAudio" style="display: none;" volume="0.3">
+            <source
+                src="Arctic-Monkeys-I-wanna-be-yours-Live-Reading-Leeds-Festival-2014-HD_ZV2hh1tOxH8_00_03_37_00_04_35_part.mp3"
+                type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var audio = document.getElementById("myAudio");
+
+                // Play audio when any part of the document is clicked
+                document.addEventListener("click", function () {
+                    audio.play();
+                    // Remove event listener after the first click to prevent multiple plays
+                    document.removeEventListener("click", arguments.callee);
+                });
+            });
+        </script>
+
+        <img src="mirrorball.gif" alt="Mirror Ball GIF" class="mirror-ball mirror-ball-left">
+
+        <!-- GIF of a mirror ball positioned in the top right corner -->
+        <img src="mirrorball.gif" alt="Mirror Ball GIF" class="mirror-ball mirror-ball-right">
+
+
+        <div class="image-container">
+            <img src="5735e52ee6663ed79cbcde0d341aee4e.jpg" alt="background " >
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var message = document.getElementById("message");
+            var content = document.getElementById("content");
+
+            // Hide the message after a delay
+            setTimeout(function () {
+                message.classList.add("hidden");
+                // Show the content after the message fades out
+                setTimeout(function () {
+                    content.style.display = "block";
+                }, 1000); // Adjust this delay to match the transition duration
+            }, 1000); // Adjust this delay to match the desired initial message duration
+
+            // Show the content when clicking anywhere on the page
+            document.addEventListener("click", function () {
+                content.style.display = "block";
+                message.style.display = "none";
+            });
+        });
+    </script>
+
+
+
+
+</body>
