@@ -7,11 +7,11 @@
     <title>SARAH PAGE</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="045_Spiderman_2x_44260.png">
+    <link rel="icon" type="image/png" href="people.png">
     <style>
         @media only screen and (max-width: 600px) {
-  /* Styles for screens up to 600px wide (typical phone screens) */
-}
+            /* Styles for screens up to 600px wide (typical phone screens) */
+        }
 
         .centered-title {
             text-align: center;
@@ -87,6 +87,7 @@
 
         .bottom-text a:hover {
             text-decoration: underline;
+
         }
 
         #message {
@@ -131,7 +132,6 @@
             width: 100%;
             height: auto;
             opacity: 1;
-            /* Low opacity for the image  */
             border-radius: 10px;
         }
 
@@ -172,25 +172,26 @@
             color: white;
             text-align: left;
             padding: 20px;
-            font-family: Georgia ;
+            font-family: Georgia;
             line-height: 30px;
         }
+
         .signature {
             position: absolute;
-            bottom: -3% ;
+            bottom: -3%;
             left: 50%;
             font-size: 10px;
             color: white;
             text-align: left;
             padding: 20px;
-            font-family: Georgia ;
+            font-family: Georgia;
             line-height: 15px;
 
         }
     </style>
 
 <body>
- <script>
+    <script>
         // Check if the user is logged in
         var loggedIn = localStorage.getItem("loggedIn");
         if (!loggedIn || loggedIn !== "true") {
@@ -212,9 +213,9 @@
     <div id="message">
         <h1>YOUUUU DID ITTTT BABEE <img src="redheart.png" alt="red heart" height="50"><img src="sparkles.png"
                 alt="red heart" height="50"></h1>
-                <div class="bottom-text">
-                    <a href="#">click somewhere in the page so you can enter babe</a> 
-                </div>
+        <div class="bottom-text">
+            <a href="#">click somewhere in the page so you can enter babe</a>
+        </div>
     </div>
 
 
@@ -252,47 +253,56 @@
             <div class="image-container">
                 <img src="5735e52ee6663ed79cbcde0d341aee4e.jpg" alt="Your Image">
                 <div class="text">
-                    <h3>Holaaa  Sarah it's me Dex again, <br>I hope this letter finds you smiling, I just wanted to take a moment to tell you how much you mean to me.
-                        Every day with you feels like a blessing. You are the moon of my life, the shine that brightens my darkest days even the brightest i mean you do it everytime
-                    ,From the moment you walked into my life, you brought with you a warmth and a joy and a pure love that I had never known before. With you, I feel understood, supported,
-                     and deeply loved. Your presence in my life has brought me more joy than I ever thought possible, and I am endlessly grateful for you. I am so lucky to have you by my side, and I promise to cherish you for all the days of my life, and I look forward to every moment we share together.
+                    <h3>Holaaa Sarah it's me Dex again, <br>I hope this letter finds you smiling, I just wanted to take
+                        a moment to tell you how much you mean to me.
+                        Every day with you feels like a blessing. You are the moon of my life, the shine that brightens
+                        my darkest days even the brightest i mean you do it everytime
+                        ,From the moment you walked into my life, you brought with you a warmth and a joy and a pure
+                        love that I had never known before. With you, I feel understood, supported,
+                        and deeply loved. Your presence in my life has brought me more joy than I ever thought possible,
+                        and I am endlessly grateful for you. I am so lucky to have you by my side, and I promise to
+                        cherish you for all the days of my life, and I look forward to every moment we share together.
 
                     </h3>
                 </div>
                 <div class="signature">
                     <h3>I love you more than words can say Ma Pretty GIRL &nbsp&nbsp DEX 7 32 </h3>
-                    
+
+
+                </div>
 
             </div>
+            <br>
+            <div class="bottom-text" style="text-align: center;">
+                <a> made with love for my lovely girlfriend SARAH <img src="beatingheart.png" alt="beating heart"
+                        height="20px"></a>
+                <br><br>
+            </div>
 
-        </div>
-        <br><br><br><br>
-        <footer><h1>made with love</h1></footer>
 
-        
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var message = document.getElementById("message");
-                var content = document.getElementById("content");
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    var message = document.getElementById("message");
+                    var content = document.getElementById("content");
 
-                // Hide the message after a delay
-                setTimeout(function () {
-                    message.classList.add("hidden");
-                    // Show the content after the message fades out
+                    // Hide the message after a delay
                     setTimeout(function () {
+                        message.classList.add("hidden");
+                        // Show the content after the message fades out
+                        setTimeout(function () {
 
+                            content.style.display = "block";
+                        }, 1000); // Adjust this delay to match the transition duration
+                    }, 10000); // Adjust this delay to match the desired initial message duration
+
+                    // Show the content when clicking anywhere on the page
+                    document.addEventListener("click", function () {
                         content.style.display = "block";
-                    }, 1000); // Adjust this delay to match the transition duration
-                }, 10000); // Adjust this delay to match the desired initial message duration
-
-                // Show the content when clicking anywhere on the page
-                document.addEventListener("click", function () {
-                    content.style.display = "block";
-                    message.style.display = "none";
+                        message.style.display = "none";
+                    });
                 });
-            });
-        </script>
+            </script>
 
 
 
