@@ -8,11 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: 'Proxima Nova';
-            src: url('proxima-nova.woff2') format('woff2'),
-                url('proxima-nova.woff') format('woff');
-        }
+        @media only screen and (max-width: 600px) {
+  /* Styles for screens up to 600px wide (typical phone screens) */
+}
 
         .centered-title {
             text-align: center;
@@ -29,15 +27,13 @@
         }
 
         .container {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            max-width: 400px;
+            position: relative;
             width: 100%;
-            backdrop-filter: blur(10px);
-            text-align: center;
+            max-width: 500px;
         }
+
+        /* Adjust as needed */
+
 
         h1 {
             margin-bottom: 30px;
@@ -84,7 +80,7 @@
         }
 
         .bottom-text a {
-            color: #333;
+            color: #ffafaf;
             text-decoration: none;
         }
 
@@ -101,6 +97,7 @@
         /* Hide the message when opacity is 0 */
         #message.hidden {
             opacity: 0;
+            transition: opacity 1s ease;
         }
 
         .mirror-ball {
@@ -120,23 +117,103 @@
             right: 20px;
             /* Distance from right */
         }
+
         .image-container {
+            position: relative;
             display: inline-block;
-            border: 3px solid rgba(0, 0, 0, 0.2); /* Border with low opacity */
-            padding: 10px;
+            max-width: 80vw;
+            Adjust the maximum width as needed
         }
 
         .image-container img {
-            max-width: 100%;
-            opacity: 0.5; /* Low opacity for the image */
+            display: block;
+            width: 100%;
+            height: auto;
+            opacity: 1;
+            /* Low opacity for the image  */
+            border-radius: 10px;
+        }
+
+        /* Optional: Add border-radius for rounded corners */
+
+        .container {
+            position: absolute;
+            width: 100%;
+            max-width: 400px;
+            /* Adjust as needed */
+            top: 0%;
+            left: 35%;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            max-width: 80vw;
+            /* Adjust the maximum width as needed */
+        }
+
+        .image-container img {
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+            height: auto;
+            opacity: 0.5;
+            /* Low opacity for the image */
+            border-radius: 10px;
+            /* Optional: Add border-radius for rounded corners */
+        }
+
+        .text {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            font-size: 16px;
+            color: white;
+            text-align: left;
+            padding: 20px;
+            font-family: Georgia ;
+            line-height: 30px;
+        }
+        .signature {
+            position: absolute;
+            bottom: -3% ;
+            left: 50%;
+            font-size: 10px;
+            color: white;
+            text-align: left;
+            padding: 20px;
+            font-family: Georgia ;
+            line-height: 15px;
+
         }
     </style>
 
 <body>
+ <script>
+        // Check if the user is logged in
+        var loggedIn = localStorage.getItem("loggedIn");
+        if (!loggedIn || loggedIn !== "true") {
+          // If not logged in, redirect to the login page
+          window.location.href = "index.html";
+        } else {
+          // Set the flag again to ensure that the user remains logged in on page refresh
+          localStorage.setItem("loggedIn", "true");
+        }
+    
+        // Listen for page refresh or unload events
+        window.addEventListener("beforeunload", function(event) {
+          // Clear the login state upon page refresh
+          localStorage.removeItem("loggedIn");
+        });
+      </script>
+    
 
     <div id="message">
         <h1>YOUUUU DID ITTTT BABEE <img src="redheart.png" alt="red heart" height="50"><img src="sparkles.png"
                 alt="red heart" height="50"></h1>
+                <div class="bottom-text">
+                    <a href="#">click somewhere in the page so you can enter babe</a> 
+                </div>
     </div>
 
 
@@ -144,7 +221,8 @@
 
     <div id="content" style="display: none;">
 
-        <audio id="myAudio" style="display: none;" volume="0.3">
+
+        <audio id="myAudio" style="display: none;" loop volume="0.3">
             <source
                 src="Arctic-Monkeys-I-wanna-be-yours-Live-Reading-Leeds-Festival-2014-HD_ZV2hh1tOxH8_00_03_37_00_04_35_part.mp3"
                 type="audio/mpeg">
@@ -169,49 +247,51 @@
         <!-- GIF of a mirror ball positioned in the top right corner -->
         <img src="mirrorball.gif" alt="Mirror Ball GIF" class="mirror-ball mirror-ball-right">
 
+        <div class="container">
+            <div class="image-container">
+                <img src="5735e52ee6663ed79cbcde0d341aee4e.jpg" alt="Your Image">
+                <div class="text">
+                    <h3>Holaaa  Sarah it's me Dex again, <br>I hope this letter finds you smiling, I just wanted to take a moment to tell you how much you mean to me.
+                        Every day with you feels like a blessing. You are the moon of my life, the shine that brightens my darkest days even the brightest i mean you do it everytime
+                    ,From the moment you walked into my life, you brought with you a warmth and a joy and a pure love that I had never known before. With you, I feel understood, supported,
+                     and deeply loved. Your presence in my life has brought me more joy than I ever thought possible, and I am endlessly grateful for you. I am so lucky to have you by my side, and I promise to cherish you for all the days of my life, and I look forward to every moment we share together.
 
-        <div class="image-container">
-            <img src="5735e52ee6663ed79cbcde0d341aee4e.jpg" alt="background " >
+                    </h3>
+                </div>
+                <div class="signature">
+                    <h3>I love you more than words can say Ma Pretty GIRL &nbsp&nbsp DEX 7 32 </h3>
+                    
+
+            </div>
+
         </div>
+        <br><br><br><br>
+        <h1>made with love</h1>
 
+        
 
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var message = document.getElementById("message");
+                var content = document.getElementById("content");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var message = document.getElementById("message");
-            var content = document.getElementById("content");
-
-            // Hide the message after a delay
-            setTimeout(function () {
-                message.classList.add("hidden");
-                // Show the content after the message fades out
+                // Hide the message after a delay
                 setTimeout(function () {
-                    content.style.display = "block";
-                }, 1000); // Adjust this delay to match the transition duration
-            }, 1000); // Adjust this delay to match the desired initial message duration
+                    message.classList.add("hidden");
+                    // Show the content after the message fades out
+                    setTimeout(function () {
 
-            // Show the content when clicking anywhere on the page
-            document.addEventListener("click", function () {
-                content.style.display = "block";
-                message.style.display = "none";
+                        content.style.display = "block";
+                    }, 1000); // Adjust this delay to match the transition duration
+                }, 10000); // Adjust this delay to match the desired initial message duration
+
+                // Show the content when clicking anywhere on the page
+                document.addEventListener("click", function () {
+                    content.style.display = "block";
+                    message.style.display = "none";
+                });
             });
-        });
-    </script>
+        </script>
 
 
 
